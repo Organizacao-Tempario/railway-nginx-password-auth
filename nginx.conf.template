@@ -14,7 +14,8 @@ server {
 
     # Basic hardening / sane defaults
     client_max_body_size ${MAX_BODY_SIZE};
-
+    client_body_buffer_size ${BODY_BUFFER_SIZE};
+    
     # Proxy headers
     location / {
         proxy_http_version 1.1;
