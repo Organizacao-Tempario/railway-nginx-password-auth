@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:alpine
 
 # We need: envsubst (from gettext) and htpasswd (apache2-utils) to hash credentials
 RUN apk add --no-cache bash gettext apache2-utils
