@@ -21,6 +21,7 @@ ENV ORIGIN=""
 ENV BASIC_AUTH=""
 ENV BASIC_AUTH_REALM="Restricted"
 ENV MAX_BODY_SIZE=""
+ENV BODY_BUFFER_SIZE=""
 
 # Let the stock entrypoint handle templating + daemon
 CMD ["nginx", "-g", "daemon off;"]
