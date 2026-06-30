@@ -20,7 +20,7 @@ EXPOSE 80
 ENV ORIGIN=""
 ENV BASIC_AUTH=""
 ENV BASIC_AUTH_REALM="Restricted"
-ENV MAX_BODY_SIZE=500M
+ENV MAX_BODY_SIZE="500M"
 
 # Let the stock entrypoint handle templating + daemon
 CMD ["nginx", "-g", "daemon off;"]
