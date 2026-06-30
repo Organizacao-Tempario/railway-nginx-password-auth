@@ -1,4 +1,4 @@
-FROM nginx:1.27-alpine
+FROM nginx:latest
 
 # We need: envsubst (from gettext) and htpasswd (apache2-utils) to hash credentials
 RUN apk add --no-cache bash gettext apache2-utils
@@ -20,6 +20,7 @@ EXPOSE 80
 ENV ORIGIN=""
 ENV BASIC_AUTH=""
 ENV BASIC_AUTH_REALM="Restricted"
+ENV MAX_BODY_SIZE=500M
 
 # Let the stock entrypoint handle templating + daemon
 CMD ["nginx", "-g", "daemon off;"]
